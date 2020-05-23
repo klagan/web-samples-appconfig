@@ -7,7 +7,7 @@ trigger:
 parameters:
 - name: AgentName
   type: string
-  default: 'Linux Agents'
+  default: 'Azure Pipelines'
   values:
   - 'Azure Pipelines'
   - 'Linux Agents'
