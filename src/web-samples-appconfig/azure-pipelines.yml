@@ -16,7 +16,7 @@ parameters:
 variables:
   buildConfiguration: 'Release'
   webProjects: '**/*.csproj'
-  terraformFolder: '**/src/web-samples-appconfig/terraform'
+  terraformFolder: '$(System.DefaultWorkingDirectory/src/web-samples-appconfig/terraform'
   testProjects: '**/*[Tt]ests/*.csproj'
 
 stages:
