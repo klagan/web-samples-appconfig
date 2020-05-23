@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "web-samples-appconfig", "web-samples-appconfig.csproj", "{EC3E5B98-CC89-4C31-8721-56EEE218F0F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".config", ".config", "{5D207C99-05C0-4FDF-A2BB-6640CA6EE55F}"
+ProjectSection(SolutionItems) = preProject
+	azure-pipelines.yml = azure-pipelines.yml
+	..\..\.gitignore = ..\..\.gitignore
+EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC3E5B98-CC89-4C31-8721-56EEE218F0F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC3E5B98-CC89-4C31-8721-56EEE218F0F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC3E5B98-CC89-4C31-8721-56EEE218F0F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC3E5B98-CC89-4C31-8721-56EEE218F0F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
