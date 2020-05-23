@@ -13,7 +13,7 @@ variable app_configuration_sku {}
 
 resource "random_string" "random_five" {
   length           = 5
-  special          = true
+  special          = false
   upper            = false
-  override_special = "/@£$"
+  # override_special = "/@£$"
 }

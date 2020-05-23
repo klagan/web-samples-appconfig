@@ -20,3 +20,6 @@ dotnet user-secrets set ConnectionStrings:AppConfig <connectionstring>
 ```
 
 Now the application will able to use this local variable to connect to the app configuration and pull the variables.
+
+The app configuration key-value labels are used to illustrate the ability to load the same key with different values based on the label.
+

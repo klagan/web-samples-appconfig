@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="$PROJECT_DIR$/../../.gitignore" t="Include" />
+    <e p="$PROJECT_DIR$/../../readme.md" t="Include" />
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p=".config" t="Include" />
+      <e p=".gitignore" t="Include" />
       <e p="appsettings.Development.json" t="Include" />
       <e p="appsettings.json" t="Include" />
       <e p="azure-pipelines.yml" t="Include" />
@@ -29,6 +31,7 @@
       </e>
       <e p="Startup.cs" t="Include" />
       <e p="terraform" t="Include">
+        <e p=".gitignore" t="Include" />
         <e p=".terraform" t="Include">
           <e p="plugins" t="Include">
             <e p="darwin_amd64" t="Include">
@@ -41,11 +44,8 @@
         </e>
         <e p="configuration.auto.tfvars" t="Include" />
         <e p="configuration.tfvars" t="Include" />
-        <e p="load-appconfiguration.azcli" t="Include" />
         <e p="main.tf" t="Include" />
         <e p="outputs.tf" t="Include" />
-        <e p="terraform.tfstate" t="Include" />
-        <e p="terraform.tfstate.backup" t="Include" />
         <e p="variables.tf" t="Include" />
         <e p="versions.tf" t="Include" />
       </e>

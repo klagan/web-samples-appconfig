@@ -31,7 +31,13 @@ namespace web_samples_appconfig
                         ) =>
                         {
                             var settings = config.Build();
-                            config.AddAzureAppConfiguration(settings["ConnectionStrings:AppConfig"]);
+
+                            config.AddAzureAppConfiguration(options =>
+                                options
+                                    .Connect(settings["ConnectionStrings:AppConfig"])
+                                    .Select(KeyFilter.Any, LabelFilter.Null) // load the un-labelled keys
+                                    .Select(KeyFilter.Any, "sample") // override with the keys labelled 'sample'
+                                    .Select(KeyFilter.Any, hostingContext.HostingEnvironment.EnvironmentName)); // override with keys labelled as the current environment
                         })
                         .UseStartup<Startup>();
                 });
