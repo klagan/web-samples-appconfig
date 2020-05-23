@@ -13,6 +13,12 @@ parameters:
   - 'Linux Agents'
   - 'MS Windows Agents'
 
+variables:
+  buildConfiguration: 'Release'
+  webProjects: '**/*.csproj'
+  terraformFolder: '/terraform'
+  testProjects: '**/*[Tt]ests/*.csproj'
+
 stages:
   - stage: 'Build'
     pool:
@@ -20,14 +26,21 @@ stages:
       vmImage: 'ubuntu-latest'
     jobs:  
     - job: 'Bundle'
+      
       steps:
       - script: echo $(build.buildNumber)
         displayName: Show build number
-
+        
+      - task: DotNetCoreCLI@2
+        displayName: Build
+        inputs:
+          projects: $(webProjects)
+          arguments: '--configuration $(buildConfiguration)'
+          
       - task: CopyFiles@2
         displayName: Copy terraform plan artefacts
         inputs: 
-          sourceFolder: '$(System.DefaultWorkingDirectory)'
+          sourceFolder: '$(terraformFolder)'
           contents: |
             **/*.tf
             **/configuration.tfvars
@@ -37,6 +50,21 @@ stages:
           cleanTargetFolder: false
           overWrite: false
           flattenFolders: false
+
+      - task: DotNetCoreCLI@2
+        displayName: Publish
+        inputs:
+          command: publish
+          publishWebProjects: True
+          arguments: '--configuration $(BuildConfiguration) --output $(build.ArtifactStagingDirectory)/website'
+          zipAfterPublish: True
+
+      - task: PublishBuildArtifacts@1
+        displayName: Publish website artefacts
+        inputs:
+          PathtoPublish: '$(build.ArtifactStagingDirectory)/website'
+          ArtifactName: website
+          condition: succeededOrFailed()
 
       - task: PublishBuildArtifacts@1
         displayName: Publish terraform plan artefacts
