@@ -1,6 +1,8 @@
 # Introduction
 
-[Source](https://docs.microsoft.com/en-us/azure/azure-app-configuration/quickstart-aspnet-core-app?tabs=core3x)
+[Source 1](https://docs.microsoft.com/en-us/azure/azure-app-configuration/quickstart-aspnet-core-app?tabs=core3x)
+<br>
+[Source 2](https://docs.microsoft.com/en-us/azure/azure-app-configuration/howto-labels-aspnet-core)
 
 This is an ASPNETCore sample of using Azure App Configuration.
 
