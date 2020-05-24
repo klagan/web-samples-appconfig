@@ -1,5 +1,7 @@
 ﻿@using Microsoft.Extensions.Configuration
 @inject IConfiguration Configuration
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, Microsoft.FeatureManagement.AspNetCore
 
 <style>
     body {
@@ -10,5 +12,9 @@
         font-size: @Configuration["TestApp:Settings:FontSize"];
     }
 </style>
+
+    <feature name="BetaFeature">
+        <h3>Beta feature enabled</h3>
+    </feature>
 
 <h1>@Configuration["TestApp:Settings:Message"]</h1>

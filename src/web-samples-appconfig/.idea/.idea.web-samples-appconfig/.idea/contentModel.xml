@@ -32,18 +32,6 @@
       <e p="Startup.cs" t="Include" />
       <e p="terraform" t="Include">
         <e p=".gitignore" t="Include" />
-        <e p=".terraform" t="Include">
-          <e p="plugins" t="Include">
-            <e p="darwin_amd64" t="Include">
-              <e p="lock.json" t="Include" />
-              <e p="terraform-provider-azuread_v0.9.0_x4" t="Include" />
-              <e p="terraform-provider-azurerm_v2.11.0_x5" t="Include" />
-              <e p="terraform-provider-null_v2.1.2_x4" t="Include" />
-              <e p="terraform-provider-random_v2.2.1_x4" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p=".terraform.tfstate.lock.info" t="Include" />
         <e p="configuration.auto.tfvars" t="Include" />
         <e p="configuration.tfvars" t="Include" />
         <e p="main.tf" t="Include" />

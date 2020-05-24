@@ -11,6 +11,8 @@ using Microsoft.Extensions.Hosting;
 
 namespace web_samples_appconfig
 {
+    using Microsoft.FeatureManagement;
+
     public class Startup
     {
         public Startup(
@@ -28,6 +30,8 @@ namespace web_samples_appconfig
         )
         {
             services.AddControllersWithViews();
+
+            services.AddFeatureManagement();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +50,8 @@ namespace web_samples_appconfig
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            app.UseAzureAppConfiguration();  // add this to get dynamic changes visible immediately without reload
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
