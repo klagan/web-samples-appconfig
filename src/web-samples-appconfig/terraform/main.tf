@@ -8,6 +8,7 @@ resource "azurerm_app_configuration" "my_appconfig" {
   resource_group_name = azurerm_resource_group.my_resourcegroup.name
   location            = azurerm_resource_group.my_resourcegroup.location
   sku                 = var.app_configuration_sku
+  depends_on          = [azurerm_resource_group.my_resourcegroup]
 }
 
 resource "null_resource" "deployment" {
@@ -20,12 +21,9 @@ resource "null_resource" "deployment" {
     EOT
   }
 
-  # trigger is saying: if this property changes then run the provisioner
-  # triggers = {
-  #  # always_run = "${timestamp()}"
-  #  if_app_one_application_id_changes = azuread_application.my_api_one_appreg.application_id
-  #  if_app_two_application_id_changes = azuread_application.my_api_two_appreg.application_id
-  #}
+  triggers = {
+    always_run = timestamp()
+  }
 
-  # depends_on = [azuread_application.my_api_one_appreg, azuread_application.my_api_two_appreg]
+  depends_on = [azurerm_app_configuration.my_appconfig]
 }

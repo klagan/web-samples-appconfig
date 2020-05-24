@@ -43,6 +43,7 @@
             </e>
           </e>
         </e>
+        <e p=".terraform.tfstate.lock.info" t="Include" />
         <e p="configuration.auto.tfvars" t="Include" />
         <e p="configuration.tfvars" t="Include" />
         <e p="main.tf" t="Include" />
