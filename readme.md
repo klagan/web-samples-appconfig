@@ -83,6 +83,8 @@ if (await _featureManager.IsEnabledAsync("BetaFeature"))
 [Source 1](https://docs.microsoft.com/en-us/azure/azure-app-configuration/quickstart-aspnet-core-app?tabs=core3x)
 <br>
 [Source 2](https://docs.microsoft.com/en-us/azure/azure-app-configuration/howto-labels-aspnet-core)
+<br>
+[Source 3](https://dontcodetired.com/blog/post/Using-the-Microsoft-Feature-Toggle-Library-in-ASPNET-Core-(MicrosoftFeatureManagement)
 
 Project requires the following packages:
 ```dotnetcli
