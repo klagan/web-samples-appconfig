@@ -38,6 +38,7 @@
               <e p="lock.json" t="Include" />
               <e p="terraform-provider-azuread_v0.9.0_x4" t="Include" />
               <e p="terraform-provider-azurerm_v2.11.0_x5" t="Include" />
+              <e p="terraform-provider-null_v2.1.2_x4" t="Include" />
               <e p="terraform-provider-random_v2.2.1_x4" t="Include" />
             </e>
           </e>
@@ -46,6 +47,8 @@
         <e p="configuration.tfvars" t="Include" />
         <e p="main.tf" t="Include" />
         <e p="outputs.tf" t="Include" />
+        <e p="terraform.tfstate" t="Include" />
+        <e p="terraform.tfstate.backup" t="Include" />
         <e p="variables.tf" t="Include" />
         <e p="versions.tf" t="Include" />
       </e>
