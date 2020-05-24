@@ -24,7 +24,7 @@ The `add_connectionstring_to_usersecret_manager` output by the terraform command
 
 It will add the app configuration connection string to the local user secrets and appear similar to:
 
-```dotnetcli
+```cli
 dotnet user-secrets set ConnectionStrings:AppConfig <connectionstring>
 ```
 
@@ -38,14 +38,14 @@ The app configuration key-value labels are used to illustrate the ability to loa
 #### Tag helper
 
 Add the following includes to the page:
-```
+```csharp
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @addTagHelper *, Microsoft.FeatureManagement.AspNetCore
 ```
 
 Then you can use the `feature` tag:
 
-```$xslt
+```html
 <feature name="BetaFeature">
     <h3>Beta feature enabled</h3>
 </feature>
@@ -84,7 +84,7 @@ if (await _featureManager.IsEnabledAsync("BetaFeature"))
 <br>
 [Source 2](https://docs.microsoft.com/en-us/azure/azure-app-configuration/howto-labels-aspnet-core)
 <br>
-[Source 3](https://dontcodetired.com/blog/post/Using-the-Microsoft-Feature-Toggle-Library-in-ASPNET-Core-(MicrosoftFeatureManagement)
+[Source 3](https://dontcodetired.com/blog/post/Using-the-Microsoft-Feature-Toggle-Library-in-ASPNET-Core-(MicrosoftFeatureManagement))
 
 Project requires the following packages:
 ```dotnetcli
